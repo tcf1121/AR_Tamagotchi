@@ -19,13 +19,31 @@ public class Pet : MonoBehaviour
 
     private void Init()
     {
-        ResetStress();
-        ResetSickDay();
-        Satiety = 50;
-        Exp = 0;
-        IsSick = false;
-        IsDie += Die;
-        IsEvolution += Evolution;
+        if (PlayerPrefs.HasKey("Stress"))
+        {
+            Stress = PlayerPrefs.GetInt("Stress");
+            Satiety = PlayerPrefs.GetInt("Satiety");
+            SickDay = PlayerPrefs.GetInt("Satiety");
+            Exp = PlayerPrefs.GetInt("Exp");
+            IsSick = PlayerPrefs.GetInt("IsSick") == 1 ? true : false;
+            int lastTime = (int)GameManager.LastTime / 600;
+            int lastDay = (int)GameManager.LastTime / 86400;
+            for (int i = 0; i < lastTime; i++)
+                PetUpdate();
+            for (int i = 0; i < lastDay; i++)
+                SickUpdate();
+        }
+        else
+        {
+            ResetStress();
+            ResetSickDay();
+            Satiety = 50;
+            Exp = 0;
+            IsSick = false;
+            IsDie += Die;
+            IsEvolution += Evolution;
+        }
+
         InvokeRepeating("PetUpdate", 600f, 600f);
         InvokeRepeating("SickUpdate", 86400f, 86400f);
     }
@@ -96,7 +114,32 @@ public class Pet : MonoBehaviour
     {
         if (_phase == 3) return;
         GameObject Pet = Instantiate(NextPhase);
-        Pet.name = this.gameObject.name;
+        Pet.name = NextPhase.name;
         Destroy(gameObject);
+    }
+
+    void OnApplicationPause(bool pause)
+    {
+        if (pause)
+        {
+            SaveQuitTime();
+        }
+    }
+
+    void OnApplicationQuit()
+    {
+        SaveQuitTime();
+    }
+
+    private void SaveQuitTime()
+    {
+        PlayerPrefs.SetString("PetStatus", $"{gameObject.name}");
+
+        PlayerPrefs.SetInt("Stress", Stress);
+        PlayerPrefs.SetInt("Satiety", Satiety);
+        PlayerPrefs.SetInt("Satiety", SickDay);
+        PlayerPrefs.SetInt("Exp", Exp);
+        PlayerPrefs.SetInt("IsSick", IsSick ? 1 : 0);
+        PlayerPrefs.Save();
     }
 }

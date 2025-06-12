@@ -53,6 +53,5 @@ public class StepCounter : MonoBehaviour
         }
 
         previousAcceleration = currentAcceleration;
-
     }
 }
