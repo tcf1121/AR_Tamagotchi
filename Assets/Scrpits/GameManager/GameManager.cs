@@ -4,14 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
     private static GameManager instance;
     public static GameManager Instance { get { return instance; } }
-
-    // [Header("UI")]
-    // [SerializeField] private GameObject startPanel;
-    // [SerializeField] private Button startBtn;
-    // [SerializeField] private Button endBtn;
 
     private void Awake()
     {
@@ -58,9 +52,4 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-
-
-
-
-
 }
