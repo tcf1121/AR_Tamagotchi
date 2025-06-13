@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class Bag : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public List<GameObject> Pets;
+
+    void Awake() => Init();
+
+    private void Init()
     {
-        
+        Pets = new();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddPet(GameObject Pet)
     {
-        
+        Pets.Add(Pet);
+    }
+
+    public void RemovePet(GameObject Pet)
+    {
+        Pets.Remove(Pet);
+    }
+
+    public void TakeOutThePet(int index)
+    {
+        GameObject Pet = Instantiate(Pets[index]);
     }
 }

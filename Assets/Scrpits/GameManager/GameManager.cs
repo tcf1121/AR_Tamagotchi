@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get { return instance; } }
     public static AppTimeTracker appTimeTracker;
     public static float LastTime;
+    public static Bag bag;
+    public static GameObject CurrentPet;
     private void Awake()
     {
         SetSingleton();

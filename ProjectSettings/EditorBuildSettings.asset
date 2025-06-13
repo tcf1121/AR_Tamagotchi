@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScene.unity
     guid: 9e7ce685d4f61c14fb14a2e0018e99f4
   - enabled: 1
-    path: Assets/Scenes/GPSScene.unity
+    path: Assets/Scenes/WalkingWithPetScene.unity
     guid: 66f4aa9305874ce48b55977b7d099184
   - enabled: 1
-    path: Assets/Scenes/GameScene.unity
+    path: Assets/Scenes/PetCareScene.unity
     guid: 430d42727b7757641b0f9f8a12485df7
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 6ee72d15cf39dd748a13eac57397b9af,

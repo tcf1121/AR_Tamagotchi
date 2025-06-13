@@ -5,6 +5,7 @@ public class Egg : MonoBehaviour
 {
     private const string IsEgg = "IsEgg";
     public List<GameObject> HatchPetList;
+    public Sprite image;
     public int HatchCount;
 
     void Awake() => Init();
@@ -24,6 +25,8 @@ public class Egg : MonoBehaviour
         int num = Random.Range(0, HatchPetList.Count);
         GameObject Pet = Instantiate(HatchPetList[num]);
         Pet.name = HatchPetList[num].name;
+        GameManager.bag.AddPet(Pet);
+        GameManager.bag.RemovePet(gameObject);
     }
 
     void OnApplicationPause(bool pause)

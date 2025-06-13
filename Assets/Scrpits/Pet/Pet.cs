@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,6 +5,7 @@ public class Pet : MonoBehaviour
 {
     [SerializeField] private int _phase;
     [SerializeField] private GameObject NextPhase;
+    public Sprite image;
     public int Stress;  // 스트레스 100이 지속될 경우 아픔
     public int Satiety; // 포만감   0이 지속될 경우 스트레스 증가
     public int SickDay; // 아픈 날이 5일 이상 지속되면 죽음
@@ -116,6 +115,8 @@ public class Pet : MonoBehaviour
         GameObject Pet = Instantiate(NextPhase);
         Pet.name = NextPhase.name;
         Destroy(gameObject);
+        GameManager.bag.AddPet(Pet);
+        GameManager.bag.RemovePet(gameObject);
     }
 
     void OnApplicationPause(bool pause)

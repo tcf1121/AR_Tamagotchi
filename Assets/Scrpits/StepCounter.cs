@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class StepCounter : MonoBehaviour
@@ -9,6 +10,8 @@ public class StepCounter : MonoBehaviour
     private Vector3 currentAcceleration;
     private float threshold; // 튜닝 필요
     private int stepCount;
+    public int StepCount { get { return stepCount; } set { stepCount = value; ChangeCount?.Invoke(); } }
+    public UnityAction ChangeCount;
 
     private bool isCooldown;
     private float cooldownTime; // 최소 걸음 간격 (초)
