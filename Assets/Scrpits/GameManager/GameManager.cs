@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 
@@ -10,10 +11,12 @@ public class GameManager : MonoBehaviour
     public static float LastTime;
     public static Bag bag;
     public static GameObject CurrentPet;
+    public static UnityAction<GameObject> IsChangedPet;
     private void Awake()
     {
         SetSingleton();
         appTimeTracker = GetComponent<AppTimeTracker>();
+        bag = GetComponent<Bag>();
     }
     private void SetSingleton()
     {
@@ -56,4 +59,5 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
 }

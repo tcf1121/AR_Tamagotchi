@@ -15,7 +15,7 @@ public class CreatEgg : MonoBehaviour
 
     private void Init()
     {
-        _totalCount = 1000;
+        _totalCount = 10;
         _currentCount = 0;
         _stepCounter.ChangeCount += CountUp;
     }

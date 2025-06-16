@@ -47,11 +47,12 @@ public class PetSlot : MonoBehaviour
     public void TakeOut()
     {
         GameManager.CurrentPet = pet;
+        GameManager.IsChangedPet?.Invoke(pet);
     }
 
     public void Playing()
     {
         GameManager.CurrentPet = pet;
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
 }

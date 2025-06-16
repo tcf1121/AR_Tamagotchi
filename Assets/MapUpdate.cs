@@ -16,7 +16,7 @@ public class MapUpdate : MonoBehaviour
     {
         _zoom = 16;
         SetLatitudeLongitude();
-        UpdateMap();
+        //UpdateMap();
     }
 
     void Update()

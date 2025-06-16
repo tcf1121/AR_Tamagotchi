@@ -1,0 +1,346 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6848940810953940809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6764255268782617810}
+  - component: {fileID: 3991071992593975786}
+  - component: {fileID: 2206429242181032575}
+  m_Layer: 0
+  m_Name: Dog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6764255268782617810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6848940810953940809}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1577908687913374104}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3991071992593975786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6848940810953940809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ac9ebdcbce9eb24186281866333e3d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <DogAnimator>k__BackingField: {fileID: 4242337767843066314}
+  <AngryDuration>k__BackingField: 3
+  <HappyDuration>k__BackingField: 3
+  <IdleSitDelay>k__BackingField: 5
+  <Food>k__BackingField: {fileID: 0}
+  <MoveTransform>k__BackingField: {fileID: 0}
+  <IsHeadPet>k__BackingField: 0
+  <IsTailPet>k__BackingField: 0
+--- !u!135 &2206429242181032575
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6848940810953940809}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &3195868881327301775
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6764255268782617810}
+    m_Modifications:
+    - target: {fileID: 1622930194220143941, guid: 3568ea2e97a164d43a0c334ab62e8694,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e6a52f77a55033d44aa51c7f4bbd01a6, type: 2}
+    - target: {fileID: 2035870914333943685, guid: 3568ea2e97a164d43a0c334ab62e8694,
+        type: 3}
+      propertyPath: m_Name
+      value: DEF-spine.011_Head
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035870914333943685, guid: 3568ea2e97a164d43a0c334ab62e8694,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925358294965130716, guid: 3568ea2e97a164d43a0c334ab62e8694,
+        type: 3}
+      propertyPath: m_Name
+      value: cur
+      objectReference: {fileID: 0}
+    - target: {fileID: 4098401071417930666, guid: 3568ea2e97a164d43a0c334ab62e8694,
+        type: 3}
+      propertyPath: m_Name
+      value: DEF-spine.003_Tail
+      objectReference: {fileID: 0}
+    - target: {fileID: 4098401071417930666, guid: 3568ea2e97a164d43a0c334ab62e8694,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161284582465434903, guid: 3568ea2e97a164d43a0c334ab62e8694,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161284582465434903, guid: 3568ea2e97a164d43a0c334ab62e8694,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161284582465434903, guid: 3568ea2e97a164d43a0c334ab62e8694,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161284582465434903, guid: 3568ea2e97a164d43a0c334ab62e8694,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161284582465434903, guid: 3568ea2e97a164d43a0c334ab62e8694,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161284582465434903, guid: 3568ea2e97a164d43a0c334ab62e8694,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161284582465434903, guid: 3568ea2e97a164d43a0c334ab62e8694,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161284582465434903, guid: 3568ea2e97a164d43a0c334ab62e8694,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161284582465434903, guid: 3568ea2e97a164d43a0c334ab62e8694,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161284582465434903, guid: 3568ea2e97a164d43a0c334ab62e8694,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4098401071417930666, guid: 3568ea2e97a164d43a0c334ab62e8694,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7104405283001314145}
+    - targetCorrespondingSourceObject: {fileID: 4098401071417930666, guid: 3568ea2e97a164d43a0c334ab62e8694,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5486331335632413559}
+    - targetCorrespondingSourceObject: {fileID: 4098401071417930666, guid: 3568ea2e97a164d43a0c334ab62e8694,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3630509410618762634}
+    - targetCorrespondingSourceObject: {fileID: 2035870914333943685, guid: 3568ea2e97a164d43a0c334ab62e8694,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2377680887439008443}
+    - targetCorrespondingSourceObject: {fileID: 2035870914333943685, guid: 3568ea2e97a164d43a0c334ab62e8694,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 845315996532940080}
+    - targetCorrespondingSourceObject: {fileID: 2035870914333943685, guid: 3568ea2e97a164d43a0c334ab62e8694,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3730278545632962517}
+  m_SourcePrefab: {fileID: 100100000, guid: 3568ea2e97a164d43a0c334ab62e8694, type: 3}
+--- !u!1 &1493633631343548197 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4098401071417930666, guid: 3568ea2e97a164d43a0c334ab62e8694,
+    type: 3}
+  m_PrefabInstance: {fileID: 3195868881327301775}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &7104405283001314145
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493633631343548197}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09, y: 0.09, z: 0.17}
+  m_Center: {x: 0, y: -0.02, z: -0.03}
+--- !u!114 &5486331335632413559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493633631343548197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eb0976afceb86a4fb7e1f7677cbe9a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _actionDelay: 4
+  _events:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3991071992593975786}
+        m_TargetAssemblyTypeName: DogController, Assembly-CSharp
+        m_MethodName: set_IsTailPet
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  _currentCount: 0
+--- !u!114 &3630509410618762634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493633631343548197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df13cec0a0a4e94baf7153691394c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _components:
+  - {fileID: 5486331335632413559}
+--- !u!4 &1577908687913374104 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4161284582465434903, guid: 3568ea2e97a164d43a0c334ab62e8694,
+    type: 3}
+  m_PrefabInstance: {fileID: 3195868881327301775}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3466324892361786122 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2035870914333943685, guid: 3568ea2e97a164d43a0c334ab62e8694,
+    type: 3}
+  m_PrefabInstance: {fileID: 3195868881327301775}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2377680887439008443
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466324892361786122}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.12, y: 0.1, z: 0.16}
+  m_Center: {x: 0, y: 0.09, z: 0.06}
+--- !u!114 &845315996532940080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466324892361786122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eb0976afceb86a4fb7e1f7677cbe9a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _actionDelay: 4
+  _events:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3991071992593975786}
+        m_TargetAssemblyTypeName: DogController, Assembly-CSharp
+        m_MethodName: set_IsHeadPet
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  _currentCount: 0
+--- !u!114 &3730278545632962517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466324892361786122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df13cec0a0a4e94baf7153691394c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _components:
+  - {fileID: 845315996532940080}
+--- !u!95 &4242337767843066314 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1622930194220143941, guid: 3568ea2e97a164d43a0c334ab62e8694,
+    type: 3}
+  m_PrefabInstance: {fileID: 3195868881327301775}
+  m_PrefabAsset: {fileID: 0}

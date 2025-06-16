@@ -8,7 +8,7 @@ public class StepCounter : MonoBehaviour
 {
     private Vector3 previousAcceleration;
     private Vector3 currentAcceleration;
-    private float threshold; // 튜닝 필요
+    private float threshold;
     private int stepCount;
     public int StepCount { get { return stepCount; } set { stepCount = value; ChangeCount?.Invoke(); } }
     public UnityAction ChangeCount;
@@ -23,10 +23,9 @@ public class StepCounter : MonoBehaviour
 
     private void Init()
     {
-        threshold = 2.0f;
+        threshold = 1.0f;
         stepCount = 0;
         stepText.text = "Steps: " + stepCount;
-        Input.gyro.enabled = true;
         isCooldown = false;
         cooldownTime = 0.4f;
         cooldownTimer = 0f;
@@ -34,13 +33,14 @@ public class StepCounter : MonoBehaviour
 
     private void Update()
     {
-        currentAcceleration = Input.gyro.rotationRateUnbiased;
+        //currentAcceleration = Input.gyro.rotationRateUnbiased;
+        currentAcceleration = Input.acceleration;
         float delta = (currentAcceleration - previousAcceleration).magnitude;
-
+        stepText.text = $"{StepCount},{delta},{currentAcceleration}";
         if (!isCooldown && delta > threshold)
         {
-            stepCount++;
-            stepText.text = "Steps: " + stepCount;
+            StepCount++;
+
 
             // 쿨다운 시작
             isCooldown = true;
@@ -58,3 +58,4 @@ public class StepCounter : MonoBehaviour
         previousAcceleration = currentAcceleration;
     }
 }
+
